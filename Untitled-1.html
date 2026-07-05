@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Navigation</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        /* ---- NAVBAR ---- */
+        .navbar {
+            background: #333;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            list-style: none;
+            display: flex;       /* Horizontal on desktop */
+            gap: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 15px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background: #555;
+        }
+
+        /* Hamburger Menu (hidden on desktop) */
+        .hamburger {
+            display: none;       /* Hidden on desktop */
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* ================================
+           TABLET (max-width: 768px)
+        ================================ */
+        @media (max-width: 768px) {
+
+            /* Show hamburger button */
+            .hamburger {
+                display: flex;
+            }
+
+            /* Hide nav links by default */
+            .nav-links {
+                display: none;       /* Hidden */
+                flex-direction: column; /* Vertical */
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #333;
+            }
+
+            /* Show when active class added */
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li a {
+                padding: 15px 20px;
+                border-bottom: 1px solid #555;
+            }
+
+            .navbar {
+                position: relative;
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌐 MyWebsite</div>
+
+    <!-- Hamburger Button (mobile only) -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navMenu">
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="#">📋 About</a></li>
+        <li><a href="#">🛠️ Services</a></li>
+        <li><a href="#">📞 Contact</a></li>
+        <li><a href="#">🔐 Login</a></li>
+    </ul>
+</nav>
+
+<div style="padding:30px; text-align:center">
+    <h2>Responsive Navigation Bar</h2>
+    <p>Resize window to see hamburger menu on mobile!</p>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
