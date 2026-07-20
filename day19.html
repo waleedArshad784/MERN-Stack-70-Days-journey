@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Random Number Genrator Game
+    </title>
+</head>
+<body>
+    <div class="flex items-center justify-center   border border-black rounded-2xl h-190 w-200 p-6 mt-10 ml-80 flex-col  mb-4">
+        <h1 class="font-bold text-2xl text-blue-500 mb-4">Random Number Genrator Game</h1>
+        <h2 class="font-bold text-1xl text-red-500 mb-4">Rule of Game</h2>
+        <pre class="mb-4">
+    The simple rule of this game is: 
+    1 : You enter a number.
+    2 :  My pc genrator a random number  which may be any number.
+    3 : The number must be equal to max number or may be any number less then this number.
+    4 : You gusss the number what it is </pre>
+    <p class="mb-4">Enter a max Number</p>
+        <input type="text" placeholder="Enter a maximum number" id="input" class="border rounded mb-5 p-3 w-130">
+        <button id="btn1" class=" border rounded mb-4 p-3 w-130 bg-blue-500">Enter Number</button>
+            <p class="mb-4" id="Qs">Guss : What is the random number?</p>
+        <input type="text" placeholder="Enter a  number to find the random number" id="guss-no" class="border rounded mb-5 p-3 w-130">
+        <button id="btn2" class="border rounded mb-4 p-3 w-130 bg-blue-500">Click Enter To Check</button>
+         <div id="Result" class="mb-4"></div>
+
+        <button id="btn3" class="border rounded mb-4 p-3 w-60 bg-blue-500">Quite The Game</button>
+        
+
+
+        </div>
+
+    </div>
+
+    <script src="day19.js"></script>
+</body>
+</html>
