@@ -3,7 +3,7 @@
 
 const Button1= document.getElementById("btn1");
 const Button2 = document.getElementById("btn2");
-const guess = Number(document.getElementById("guss-no").value);
+
 const question = document.getElementById("Qs");
 const Button3 = document.getElementById("btn3");
 
@@ -46,7 +46,7 @@ Button3.addEventListener('click',quite);
         result.style.borderRadius = "10px";
         result.style.backgroundColor = "blue";
         result.style.font = "bold";
-        result.style.fontWeight = "12px";
+        result.style.fontWeight = "bold";
 
         
 
